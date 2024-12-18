@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from '../interfaces/product';
 
@@ -11,6 +11,7 @@ export class ProductsService {
  private url = 'http://localhost:3000/products'
 
  http = inject(HttpClient)
+
 
 getAllProducts(): Observable<Product[]>  {
   return this.http.get<Product[]>(this.url);
@@ -31,6 +32,7 @@ updateProduct(product: Product):Observable<Product>{
 deleteProduct(id: number): Observable<void>{
   return this.http.delete<void>(`${this.url}/${id}`)
 }
+
 
 
 }

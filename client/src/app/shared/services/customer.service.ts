@@ -24,7 +24,7 @@ return this.http.get<Customer>(`${this.urlCustomer}/${id}`)
     return this.http.post<Customer>(this.urlCustomer, customer)
   }
 
-  updateCustomer(customer: Customer){
+  updateCustomer(customer: Customer):Observable<Customer> {
     return this.http.put<Customer>(`${this.urlCustomer}/${customer.id}`, customer)
   }
 

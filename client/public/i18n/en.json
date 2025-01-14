@@ -19,8 +19,10 @@
 "STOCK": "Stock",
 "No products available": "No products available",
 "Loading products...": "Loading products...",
-"NEW CUSTOMER": "New Customer",
+"NO PRODUCTS FOUND":"No products found",
 
+
+"NEW CUSTOMER": "New Customer",
 "CUSTOMER":"Customer",
 "SURNAME": "Sunarme",
 "AGE": "Age",
@@ -33,7 +35,8 @@
 "NO_CUSTOMERS_AVAILABLE": "No customers available",
 "LOADING_CUSTOMERS": "Loading customers...",
 "PROFILE PICTURE": "Profile Picture",
-
+"CUSTOMERS FOUND": "Customers found",
+"NO CUSTOMERS FOUND":"No Customers found",
 "ADD NEW CUSTOMER":"Add New Customer",
 "CUSTOMER LIST":"Customer List",
 

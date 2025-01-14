@@ -9,7 +9,7 @@
   />
   </mat-form-field>
 </form>
-<div>
+<div class="search-results">
   @if (searchedProduct().length > 0 && filteredProducts().length > 0) {
     @for (product of filteredProducts(); track product.id) {
       <div class="product-item" (click)="goToProduct(product.id)">
@@ -22,7 +22,20 @@
       </div>
     }
   } @else if (searchedProduct().length > 0) {
-    <p>No products found.</p>
+    <p>{{ "NO PRODUCTS FOUND" | translate }}</p>
+
+  } 
+    @if (searchedCustomer().length > 0 && filteredCustomers().length > 0) {
+    <h3>{{ 'CUSTOMERS FOUND' | translate }}</h3>
+    @for (customer of filteredCustomers(); track customer.id) {
+      <div class="customer-item" (click)="goToCustomer(customer.id)">
+        <h3>{{ customer.customerName }} {{ customer.customerSurname }}</h3>
+        <p><strong>{{ 'EMAIL' | translate }}:</strong> {{ customer.email }}</p>
+        <p><strong>{{ 'COMPANY' | translate }}:</strong> {{ customer.companyName }}</p>
+      </div>
+    }
+  } @else if (searchedCustomer().length > 0) {
+    <p>{{ 'NO CUSTOMERS FOUND' | translate }}</p>
   }
 </div>
 

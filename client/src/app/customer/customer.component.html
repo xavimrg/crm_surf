@@ -1,0 +1,16 @@
+
+<SECTION class="customer-container">
+    <mat-button-toggle-group 
+      [value]="toggleGroupValue()" 
+      (valueChange)="toggleGroupValue.set($event)">
+      <mat-button-toggle value="open">{{ "ADD NEW CUSTOMER" | translate}}</mat-button-toggle>
+      <mat-button-toggle value="close">{{ "CUSTOMER LIST" | translate}}</mat-button-toggle>
+    </mat-button-toggle-group>
+  
+    @if (toggleGroupValue() !== 'open') {
+        <app-customer-list [customers]="customers()"></app-customer-list>
+    } @else {
+      <app-customer-form [customerForm]="customerForm" (sentCustomerForm)="onSubmit($event)"></app-customer-form>
+    }
+  </SECTION>
+  

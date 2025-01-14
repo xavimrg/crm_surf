@@ -1,5 +1,52 @@
 {
 
-"hello" : "Hello"
+
+"HOME": "Home",
+"SEARCH": "Search",
+
+"PRODUCTS": "Products",
+"ORDERS":"Orders",
+"CUSTOMERS":"Customers",
+
+"ADD NEW PRODUCT":"Add New Product",
+"PRODUCT LIST":"Product List",
+
+"NAME":"Name",
+"CATEGORIES": "Categories",
+"DESCRIPTION": "Description",
+"IMAGE URL":"Iamge url",
+"PRICE": "Price",
+"STOCK": "Stock",
+"No products available": "No products available",
+"Loading products...": "Loading products...",
+"NEW CUSTOMER": "New Customer",
+
+"CUSTOMER":"Customer",
+"SURNAME": "Sunarme",
+"AGE": "Age",
+"GENDER": "Gender",
+"EMAIL": "Email",
+"JOIN_DATE": "Join Date",
+"COMPANY NAME": "Company Name",
+"COMPANY ID":"Company ID",
+"COMPANY ADDRESS": "Company Address",
+"NO_CUSTOMERS_AVAILABLE": "No customers available",
+"LOADING_CUSTOMERS": "Loading customers...",
+"PROFILE PICTURE": "Profile Picture",
+
+"ADD NEW CUSTOMER":"Add New Customer",
+"CUSTOMER LIST":"Customer List",
+
+"ADD NEW ORDER":"Add New Order",
+"ORDER LIST":"Order List",
+
+"DELETE":"Delete", 
+"EDIT":"Edit",
+"GO BACK":"Go back",
+"SAVE": "Save", 
+"CANCEL":"Cancel"
+
+
+
 
 }

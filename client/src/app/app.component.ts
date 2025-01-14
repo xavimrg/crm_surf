@@ -13,15 +13,15 @@ import { TranslateModule, TranslateService} from '@ngx-translate/core'
 export class AppComponent {
   title = 'crm-cat-memes';
 
-  translate: TranslateService = inject(TranslateService);
+  // translate: TranslateService = inject(TranslateService);
 
-  constructor() {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en'); // Carga el idioma por defecto
-  }
+  // constructor() {
+  //   this.translate.setDefaultLang('en');
+  //   this.translate.use('en'); // Carga el idioma por defecto
+  // }
 
-  translateText(lang: string){
-    this.translate.use(lang);
-  }
+  // translateText(lang: string){
+  //   this.translate.use(lang);
+  // }
 
 }

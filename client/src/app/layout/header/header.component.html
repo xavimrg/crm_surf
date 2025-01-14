@@ -1,2 +1,9 @@
-<p>header works!</p>
-<app-search></app-search>
+<div class="logo-container" routerLink="/''"><button>{{ 'HOME' | translate }}</button> </div>
+<div class="right-corner-container">
+    <div class="language-container">
+        <p>Selecciona idioma // Select language</p>
+        <button mat-raised-button color="primary" (click)="changeLanguage('es')">Español</button>
+        <button mat-raised-button color="primary" (click)="changeLanguage('en')">English</button>
+    </div>
+    <app-search></app-search>
+</div>

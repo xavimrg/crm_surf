@@ -1,3 +1,7 @@
+:host{
+height: 100%;
+}
+
 .form-field {
     width: 100%;
     margin-bottom: 16px;
@@ -7,4 +11,24 @@
     display: flex;
     justify-content: flex-end;
     gap: 16px;
+  }
+
+  .img{
+    height: 70%;
+    width: 70%;
+    border-radius: 15%;
+    margin: 3rem;
+    border: solid 1px black,
+  }
+
+  .product-container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .button-container{
+    display: flex;
+    flex-direction: row;
   }

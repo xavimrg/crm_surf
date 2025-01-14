@@ -1,0 +1,51 @@
+{
+
+"HOME": "Inicio",
+"SEARCH": "BUSCAR",
+
+"ORDERS":"Pedidos",
+"CUSTOMERS":"Clientes",
+"PRODUCTS": "Productos",
+
+"ADD NEW PRODUCT":"Añadir Productos",
+"PRODUCT LIST":"Lista de Productos",
+
+"NAME":"Nombre",
+"CATEGORIES": "Categorías",
+"DESCRIPTION": "Descripción",
+"IMAGE URL": "Url de la Imagen",
+"PRICE": "Precio",
+"STOCK": "Inventario",
+"NO PRODUCTS AVAILABLE": "No hay productos disponibles",
+"LOADING PRODUTCS...": "Cargando productos...",
+
+
+  "CUSTOMER":"Cliente",
+  "SURNAME":"Apellido",
+  "AGE": "Edad",
+  "GENDER": "Género",
+  "EMAIL": "Correo electrónico",
+  "JOIN_DATE": "Fecha de ingreso",
+  "COMPANY NAME": "Denomición social de la empresa",
+  "COMPANY ID":"Identificación fiscal NIF",
+  "COMPANY ADDRESS": "Domicilio Social",
+  "NO_CUSTOMERS_AVAILABLE": "No hay clientes disponibles",
+  "LOADING_CUSTOMERS": "Cargando clientes...",
+  "NEW CUSTOMER": "Nuevo Cliente",
+
+"ADD NEW CUSTOMER":"Añadir nuevo Cliente",
+"CUSTOMER LIST":"Lista de Clientes",
+  
+"ADD NEW ORDER":"Añadir nueva Pedido",
+"ORDER LIST":"Lista de Pedidos",
+
+"DELETE":"Eliminar", 
+"EDIT":"Editar",
+"GO BACK":"Volver atras",
+
+
+"SAVE": "Guardar", 
+"CANCEL":"Cancelar"
+  }
+  
+

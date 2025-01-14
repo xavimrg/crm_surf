@@ -1,1 +1,28 @@
-<p>search works!</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>{{ "SEARCH" | translate }}</mat-label>
+    <input
+    type="text"
+    matInput
+    placeholder="Search"
+    (input)="updateSearch($event)"
+  />
+  </mat-form-field>
+</form>
+<div>
+  @if (searchedProduct().length > 0 && filteredProducts().length > 0) {
+    @for (product of filteredProducts(); track product.id) {
+      <div class="product-item" (click)="goToProduct(product.id)">
+        <h3>{{ product.name }}</h3>
+        <img src="{{product.imageUrl}}" alt="{{product.name}}">
+        <p>{{ product.description }}</p>
+        <p><strong>Categorías:</strong> {{ product.categories?.join(', ') }}</p>
+        <p><strong>Price:</strong> {{ product.price }}</p>
+        <p><strong>Stock shipping status:</strong> {{ product.stockShippingStatus }}</p>
+      </div>
+    }
+  } @else if (searchedProduct().length > 0) {
+    <p>No products found.</p>
+  }
+</div>
+

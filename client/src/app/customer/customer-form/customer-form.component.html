@@ -1,0 +1,48 @@
+
+<section class="form-container">
+    <div class="card">
+      <h3>{{ "NEW CUSTOMER" | translate}}</h3>
+      <form class="modal-container" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+        <div class="form-field">
+          <label for="customerName">{{ "NAME" | translate}}</label>
+          <input id="customerName" type="text" formControlName="customerName" placeholder="'Name'| translate">
+        </div>
+        <div class="form-field">
+          <label for="customerSurname">{{"SURNAME" | translate}}</label>
+          <input id="customerSurname" type="text" formControlName="customerSurname" placeholder="'SURNAME' | translate">
+        </div>
+        <div class="form-field">
+          <label for="age">{{ "AGE" | translate}}</label>
+          <input id="age" type="number" formControlName="age" placeholder="'AGE' | translate">
+        </div>
+        <div class="form-field">
+          <label for="email">{{ "EMAIL" | translate}}</label>
+          <input id="email" type="text" formControlName="email" placeholder="'EMAIL' | translate">
+        </div>
+        <div class="form-field">
+          <label for="stock">{{"GENDER" | translate}}</label>
+          <input id="gender" type="text" formControlName="gender" placeholder="'GENDER'|translate">
+        </div>
+        <div class="form-field">
+          <label for="profilePhoto">{{ "PROFILE PICTURE" | translate}}</label>
+          <input id="profilePhoto" type="text" formControlName="profilePhoto" placeholder="'PROFILE PICTURE'| translate">
+        </div>
+        <div class="form-field">
+            <label for="companyName">{{ "COMPANY NAME" | translate}}</label>
+            <input id="companyName" type="text" formControlName="companyName" placeholder="'COMPANY NAME'| translate">
+          </div>
+          <div class="form-field">
+            <label for="companyId">{{ "COMPANY ID" | translate}}</label>
+            <input id="companyId" type="text" formControlName="companyId" placeholder="'COMPANY ID'| translate">
+          </div>
+        <div class="form-field">
+            <label for="companyAdress">{{ "COMPANY ADDRESS" | translate}}</label>
+            <input id="companyAddress" type="text" formControlName="companyAddress" placeholder="'COMPANY ADDRESS'| translate">
+          </div>
+      
+        
+        <button type="submit" class="add-btn">{{"ADD NEW CUSTOMER" | translate}}</button>
+      </form>
+    </div>
+  </section>
+  

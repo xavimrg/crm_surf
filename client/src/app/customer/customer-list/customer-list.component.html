@@ -1,0 +1,50 @@
+<div class="general-container">
+    <section class="customer-container">
+      <mat-card>
+        <ul class="customer-list-container">
+          @if (customers.length > 0) {
+            @for (customer of customers; track customer.id) {
+              <li>
+                <mat-card class="card-container">
+                  <a [routerLink]="['/customer', customer.id]">
+                    <img
+                      class="img-container"
+                      [src]="customer.profilePhoto"
+                      alt="{{ customer.customerName }}"
+                    />
+                    <mat-card-title class="h2">
+                      {{ 'CUSTOMER' | translate }}: {{ customer.customerName }}
+                      {{ customer.customerSurname }}
+                    </mat-card-title>
+                    <mat-card-content class="p">
+                      <p>
+                        <strong>{{ 'AGE' | translate }}:</strong>
+                        {{ customer.age }}
+                      </p>
+                      <p>
+                        <strong>{{ 'GENDER' | translate }}:</strong>
+                        {{ customer.gender }}
+                      </p>
+                      <p>
+                        <strong>{{ 'EMAIL' | translate }}:</strong>
+                        {{ customer.email }}
+                      </p>
+                      <p>
+                        <strong>{{ 'JOIN_DATE' | translate }}:</strong>
+                        {{ customer.joinDate  }}
+                      </p>
+                    </mat-card-content>
+                  </a>
+                </mat-card>
+              </li>
+            }
+           @empty {
+            <li>{{ 'NO_CUSTOMERS_AVAILABLE' | translate }}</li>}
+          } @else {
+            <p>{{ 'LOADING_CUSTOMERS' | translate }}</p>
+          }
+        </ul>
+      </mat-card>
+    </section>
+  </div>
+  

@@ -1,0 +1,16 @@
+
+<SECTION class="order-container">
+    <mat-button-toggle-group 
+      [value]="toggleGroupValue()" 
+      (valueChange)="toggleGroupValue.set($event)">
+      <mat-button-toggle value="open">{{ "ADD NEW ORDER" | translate}}</mat-button-toggle>
+      <mat-button-toggle value="close">{{ "ORDER LIST" | translate}}</mat-button-toggle>
+    </mat-button-toggle-group>
+  
+    @if (toggleGroupValue() !== 'open') {
+<app-order-list [orders]="orders()"></app-order-list>
+    } @else {
+        <app-order-form ></app-order-form> 
+    }
+  </SECTION>
+  

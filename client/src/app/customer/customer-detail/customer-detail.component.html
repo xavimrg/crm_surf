@@ -1,0 +1,208 @@
+<!-- <mat-card>
+  @if(customer){
+
+  <div class="customer-card">
+    <div class="customer-info">
+      <div class="customer-picture">
+
+        <img class="img-container" [src]="customer.profilePhoto" alt="{{ customer.customerName }}" />
+      </div>
+      <div class="customer-details">
+        <mat-card-title class="h2">
+          {{ 'CUSTOMER' | translate }}: {{ customer.customerName }}
+          {{ customer.customerSurname }}
+        </mat-card-title>
+        <mat-card-content class="ucstomer-info">
+          <p>
+            <strong>{{ 'AGE' | translate }}:</strong>
+            {{ customer.age }}
+          </p>
+          <p>
+            <strong>{{ 'GENDER' | translate }}:</strong>
+            {{ customer.gender }}
+          </p>
+          <p>
+            <strong>{{ 'EMAIL' | translate }}:</strong>
+            {{ customer.email }}
+          </p>
+          <p>
+            <strong>{{ 'JOIN_DATE' | translate }}:</strong>
+            {{ customer.joinDate }}
+          </p>
+        </mat-card-content>
+      </div>
+    </div>
+  </div>
+  } @else {
+  <form [formGroup]="customerForm" (ngSubmit)="updateCustomer()">
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label for="customerName">{{ "NAME" | translate}}</mat-label>
+      <input matInput id="customerName" type="text" formControlName="customerName" placeholder="'Name'| translate">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label for="customerSurname">{{"SURNAME" | translate}}</mat-label>
+      <input id="customerSurname" type="text" formControlName="customerSurname" placeholder="'SURNAME' | translate">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label for="age">{{ "AGE" | translate}}</mat-label>
+      <input matInput id="age" type="number" formControlName="age" placeholder="'AGE' | translate">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label for="email">{{ "EMAIL" | translate}}</mat-label>
+      <input matInput id="email" type="text" formControlName="email" placeholder="'EMAIL' | translate">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label for="stock">{{"GENDER" | translate}}</mat-label>
+      <input matInput id="gender" type="text" formControlName="gender" placeholder="'GENDER'|translate">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label for="profilePhoto">{{ "PROFILE PICTURE" | translate}}</mat-label>
+      <input matInput id="profilePhoto" type="text" formControlName="profilePhoto"
+        placeholder="'PROFILE PICTURE'| translate">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label for="companyName">{{ "COMPANY NAME" | translate}}</mat-label>
+      <input matInputid="companyName" type="text" formControlName="companyName" placeholder="'COMPANY NAME'| translate">
+
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label for="companyAdress">{{ "COMPANY ADDRESS" | translate}}</mat-label>
+      <input matInput id="companyAddress" type="text" formControlName="companyAddress"
+        placeholder="'COMPANY ADDRESS'| translate">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+
+      <mat-label for="companyId">{{ "COMPANY ID" | translate}}</mat-label>
+      <input matInput id="companyId" type="text" formControlName="companyId" placeholder="'COMPANY ID'| translate">
+    </mat-form-field>
+    >
+
+    <div class="button-group">
+      <button mat-raised-button color="primary" type="submit">{{ "SAVE" | translate}}</button>
+      <button mat-raised-button color="warn" type="button" (click)="editMode = false"> {{ "CANCEL" | translate}}
+      </button>
+    </div>
+
+  </form>
+
+  }
+  <div class="customer-buttons">
+    <button mat-raised-button color="primary" (click)="editMode = true">{{ 'EDIT' | translate }}</button>
+    <button mat-raised-button color="warn" (click)="deleteCustomer()">{{ "DELETE" | translate }}</button>
+    <button mat-raised-button color="primary" (click)="goBackToCustomers()">{{ "GO BACK" | translate}}</button>
+
+  </div>
+</mat-card> -->
+<mat-card>
+  @if(customer){
+
+  <div class="customer-card">
+    <div class="customer-info">
+      <div class="img-container">
+
+        <img class="customer-picture" [src]="customer.profilePhoto" alt="{{ customer.customerName }}" />
+      </div>
+      <div class="customer-details">
+        <mat-card-title class="h2">
+          {{ 'CUSTOMER' | translate }}: {{ customer.customerName }}
+          {{ customer.customerSurname }}
+        </mat-card-title>
+        <mat-card-content class="customer-info">
+          @if(!editMode){       <p>
+            <strong>{{ 'AGE' | translate }}:</strong>
+            {{ customer.age }}
+          </p>
+          <p>
+            <strong>{{ 'GENDER' | translate }}:</strong>
+            {{ customer.gender }}
+          </p>
+          <p>
+            <strong>{{ 'EMAIL' | translate }}:</strong>
+            {{ customer.email }}
+          </p>
+          <p>
+            <strong>{{ 'JOIN_DATE' | translate }}:</strong>
+            {{ customer.joinDate }}
+          </p>
+          <p>
+            <strong>{{ 'COMPANY NAME' | translate }}:</strong>
+            {{ customer.companyName}}
+          </p>
+          <p>
+            <strong>{{ 'COMPANY ID' | translate }}:</strong>
+            {{ customer.companyId }}
+          </p>
+          <p>
+            <strong>{{ 'COMPANY ADDRESS' | translate }}:</strong>
+            {{ customer.companyAddress }}
+          </p>
+        } @else {
+            <form [formGroup]="customerForm" (ngSubmit)="updateCustomer()">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="customerName">{{ "NAME" | translate}}</mat-label>
+                <input matInput id="customerName" type="text" formControlName="customerName" placeholder="'Name'| translate">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="customerSurname">{{"SURNAME" | translate}}</mat-label>
+                <input id="customerSurname" type="text" formControlName="customerSurname" placeholder="'SURNAME' | translate">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="age">{{ "AGE" | translate}}</mat-label>
+                <input matInput id="age" type="number" formControlName="age" placeholder="'AGE' | translate">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="email">{{ "EMAIL" | translate}}</mat-label>
+                <input matInput id="email" type="text" formControlName="email" placeholder="'EMAIL' | translate">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="stock">{{"GENDER" | translate}}</mat-label>
+                <input matInput id="gender" type="text" formControlName="gender" placeholder="'GENDER'|translate">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="profilePhoto">{{ "PROFILE PICTURE" | translate}}</mat-label>
+                <input matInput id="profilePhoto" type="text" formControlName="profilePhoto"
+                  placeholder="'PROFILE PICTURE'| translate">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="companyName">{{ "COMPANY NAME" | translate}}</mat-label>
+                <input matInputid="companyName" type="text" formControlName="companyName" placeholder="'COMPANY NAME'| translate">
+          
+              </mat-form-field>
+          
+          
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="companyAdress">{{ "COMPANY ADDRESS" | translate}}</mat-label>
+                <input matInput id="companyAddress" type="text" formControlName="companyAddress"
+                  placeholder="'COMPANY ADDRESS'| translate">
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+          
+                <mat-label for="companyId">{{ "COMPANY ID" | translate}}</mat-label>
+                <input matInput id="companyId" type="text" formControlName="companyId" placeholder="'COMPANY ID'| translate">
+              </mat-form-field>
+              
+          
+              <div class="button-group">
+                <button mat-raised-button color="primary" type="submit">{{ "SAVE" | translate}}</button>
+                <button mat-raised-button color="warn" type="button" (click)="editMode = false"> {{ "CANCEL" | translate}}
+                </button>
+              </div>
+          
+            </form>
+          
+            }
+   
+        </mat-card-content>
+      </div>
+    </div>
+  </div>
+  } 
+  <div class="customer-buttons">
+    <button mat-raised-button color="primary" (click)="editMode = true">{{ 'EDIT' | translate }}</button>
+    <button mat-raised-button color="warn" (click)="deleteCustomer()">{{ "DELETE" | translate }}</button>
+    <button mat-raised-button color="primary" (click)="goBackToCustomers()">{{ "GO BACK" | translate}}</button>
+
+  </div>
+</mat-card>

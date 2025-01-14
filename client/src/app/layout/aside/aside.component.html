@@ -1,6 +1,10 @@
 <aside>
-    <button routerLink="/product">Products</button>
-    <button routerLink="/order">Orders</button>
-    <button routerLink="/customer">Customers</button>
+  <div class="aside-button-container">
+
+    <button mat-raised-button color="primary" routerLink="/product">{{ "PRODUCTS" | translate }}</button>
+    <button mat-raised-button color="primary" routerLink="/order">{{ "ORDERS" | translate }}</button>
+    <button mat-raised-button color="primary" routerLink="/customer">{{ "CUSTOMERS" | translate }}</button>
+  </div>
+
   </aside>
   

@@ -1,0 +1,16 @@
+:host{
+    display: flex; /* Activamos Flexbox para organizar los hijos */
+    justify-content: space-between; /* Espacio entre extremos */
+    align-items: center; /* Alineamos verticalmente al centro */
+    padding: 0 10%; /* Márgenes izquierdo y derecho del 10% */
+}
+
+
+
+.right-corner-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10%;
+}

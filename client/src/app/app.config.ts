@@ -6,9 +6,14 @@ import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader}               from '@ngx-translate/http-loader'
 
+// funcion que carga mediante httpClient y el httpLoader la ruta y los archivos
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './i18n/', '.json');
 }
+
+
+
+
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), 
 
@@ -18,7 +23,7 @@ export const appConfig: ApplicationConfig = {
           useFactory: (createTranslateLoader),
           deps: [HttpClient]
       }, 
-    defaultLanguage: 'en',
+    defaultLanguage: 'en', // establece idioma preestablecido
   
   })]),
 

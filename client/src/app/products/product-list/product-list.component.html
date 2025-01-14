@@ -1,42 +1,37 @@
-{{ 'PRODUCTS'  }}
 <div class="general-container">
-    
     <section class="product-container">
-
-        <mat-card>
-   
-            <ul class="product-list-container">
-                @if ( products.length > 0){
-                @for ( product of products; track product.id){
-                <li>
-                    <mat-card class="card-container"> <a [routerLink]="['/product', product.id]">
-        
-        
-                            <img class="img-container" [src]="product.imageUrl">
-                            <mat-card-title class="h2">{{product.name}}</mat-card-title>
-                            <mat-card-subtitle>{{ 'CATEGORIES' }} : {{product.categories}}</mat-card-subtitle>
-                            <mat-card-content class="p">{{ 'DESCRIPTION' }} : {{product.description}}</mat-card-content>
-                            <div class="ps">
-                                <mat-card-subtitle>{{ 'PRICE'  }} : {{product.price}} € </mat-card-subtitle>
-                                <mat-card>{{ 'STOCK'  }} : {{product.stock}}</mat-card>
+      
+      <mat-card>
+        <ul class="product-list-container">
+      
+          @if (products.length > 0) {
+            @for (product of products; track product.id) {
+              <li>
+                <mat-card class="card-container">
+                  <a [routerLink]="['./', product.id]">
+                    <img class="img-container" [src]="product.imageUrl" />
+                    <mat-card-title class="h2">{{ 'PRODUCTS' | translate }}  {{ product.name}}</mat-card-title>
+                    <mat-card-subtitle>
+                      {{ 'CATEGORIES' | translate }} : {{ product.categories }}
+                    </mat-card-subtitle>
+                    <mat-card-content class="p">
+                      {{ 'DESCRIPTION' | translate }} : {{ product.description }}
+                    </mat-card-content>
+                    <div class="ps">
+                      <mat-card-subtitle>
+                        {{ 'PRICE' | translate }}:{{ product.price }} €
+                      </mat-card-subtitle>
+                      <mat-card>{{ 'STOCK' | translate }}:{{ product.stock }}</mat-card>
+                    </div>
+                  </a>
+                </mat-card>
+              </li>
             
-
-                            </div>
-                        </a>
-        
-                    </mat-card>
-                </li>
-                 } @empty {
-                <li>{{ 'No products available'  }}</li>
-                }
-                }@else { <p> {{'Loading products...'  }} </p>}
-         
-        
-            </ul>
-        
-        </mat-card> 
-
-
-        
+          } @empty {
+            <li>{{ 'No products available' | translate }}</li>}
+          } @else {
+          <p>{{ 'Loading products...' | translate }}</p> }
+        </ul>
+      </mat-card>
     </section>
-    </div>
+  </div>

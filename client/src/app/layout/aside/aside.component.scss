@@ -1,0 +1,13 @@
+:host{
+    flex-direction: column;
+}
+
+.aside-button-container{
+margin-top: 10px;
+margin-left: 10px;
+margin-right: 10px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+gap: 10px;
+}

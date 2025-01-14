@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
-  imports: [ProductComponent, HeaderComponent, AsideComponent, RouterOutlet],
+  imports: [ HeaderComponent, AsideComponent, RouterOutlet],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })

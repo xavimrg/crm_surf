@@ -1,0 +1,26 @@
+<p>order-list works!</p>
+<div class="order-container">
+<mat-card>
+    <ul class="order-list-container">
+        @if(orders.length > 0){
+            @for( order of orders; track order.id){
+                <li>
+                    <mat-card class="card-container">
+                    <a [routerLink]="['/order', order.id]">
+                        <mat-card-title> {{ "PRODUCT ID" | translate}}: {{order.productId}}</mat-card-title> 
+                        <mat-card-title> {{ "CUSTOMER ID" | translate}}: {{order.customerId}}</mat-card-title> 
+                        <mat-card-subtitle> {{ "QUANTITY" | translate}}: {{order.quantity}} </mat-card-subtitle>
+                        <mat-card-subtitle>  {{ "CALENDAR DATE" | translate}}: {{order.calendarDate}}</mat-card-subtitle>
+                       <mat-card-subtitle>  {{ "TOTAL PRICE" | translate}}: {{order.totalPrice}}</mat-card-subtitle>
+                        <mat-card-subtitle>{{ "ORDER STATUS" | translate}}: {{order.orderStatus}}</mat-card-subtitle>
+                    </a>
+                
+                    </mat-card>
+                </li>
+            }
+        }
+
+    </ul>
+</mat-card>
+
+</div>

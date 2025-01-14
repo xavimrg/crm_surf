@@ -6,10 +6,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-product-detail',
-  imports: [MatCardModule, MatButtonModule, ReactiveFormsModule, MatFormFieldModule],
+  imports: [MatCardModule, MatButtonModule, ReactiveFormsModule, MatFormFieldModule, TranslateModule],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.scss',
 })
@@ -81,7 +82,7 @@ const confirmDelete = window.confirm('Are you sure to delete this product?')
 if (confirmDelete && this.product.id) {
   this.productService.deleteProduct(this.product.id).subscribe({
     next: () => {
-      alert('El producto se ha eliminado correctamente.');
+      alert('The product has been succesfully deleted.');
       this.router.navigate(['/product']); 
     },
     error: (err) => {

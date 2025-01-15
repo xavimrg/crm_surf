@@ -1,3 +1,56 @@
-.search-results{
-    width: 20%;
-}
+.search-container {
+    position: relative; /* Necesario para posicionar los resultados relativos al contenedor */
+    z-index: 2; /* Asegura que el buscador esté encima del contenido principal */
+  }
+  
+  .search-input,
+  mat-form-field {
+    width: 100%; /* Asegura que el campo ocupe todo el espacio permitido */
+  }
+  
+  .search-results-container {
+    position: absolute; /* Permite posicionar los resultados sobre otros elementos */
+    top: 100%; /* Coloca los resultados inmediatamente debajo del input */
+    left: 0;
+    width: 100%; /* Asegura que los resultados ocupen el mismo ancho que el contenedor */
+    max-height: 300px; /* Altura máxima para evitar que los resultados crezcan demasiado */
+    overflow-y: auto; /* Agrega un scroll si los resultados exceden la altura máxima */
+    background-color: #fff; /* Fondo blanco para diferenciar los resultados del resto */
+    border: 1px solid #ccc; /* Bordes para separar visualmente los resultados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar los resultados */
+    border-radius: 4px;
+    z-index: 10; /* Asegura que los resultados se muestren por encima de otros elementos */
+  }
+  
+  .search-results-item {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0; /* Línea para separar cada resultado */
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espaciado entre los elementos dentro de cada resultado */
+
+    }
+  
+  
+
+  
+  h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  

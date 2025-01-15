@@ -6,10 +6,11 @@ import { ProductFormComponent } from "./product-form/product-form.component";
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatButtonToggleModule} from '@angular/material/button-toggle';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-product',
-  imports: [ProductListComponent, ProductFormComponent,  MatButtonToggleModule],
+  imports: [ProductListComponent, ProductFormComponent,  MatButtonToggleModule, TranslateModule],
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })

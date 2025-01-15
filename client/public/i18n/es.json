@@ -10,10 +10,12 @@
 "ADD NEW PRODUCT":"Añadir Productos",
 "PRODUCT LIST":"Lista de Productos",
 
+"NEW PRODUCT":"Nuevo Producto",
 "NAME":"Nombre",
 "CATEGORIES": "Categorías",
 "DESCRIPTION": "Descripción",
 "IMAGE URL": "Url de la Imagen",
+"IMAGE": "Imagen",
 "PRICE": "Precio",
 "STOCK": "Inventario",
 "NO PRODUCTS AVAILABLE": "No hay productos disponibles",

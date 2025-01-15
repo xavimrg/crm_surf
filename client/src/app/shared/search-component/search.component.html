@@ -1,17 +1,12 @@
-<form class="example-form">
+<form class="search-container">
   <mat-form-field class="example-full-width">
     <mat-label>{{ "SEARCH" | translate }}</mat-label>
-    <input
-    type="text"
-    matInput
-    placeholder="Search"
-    (input)="updateSearch($event)"
-  />
+    <input type="text"  matInput  (input)="updateSearch($event)"/>
   </mat-form-field>
 </form>
-<div class="search-results">
+<div class="search-results-container">
   @if (searchedProduct().length > 0 && filteredProducts().length > 0) {
-    @for (product of filteredProducts(); track product.id) {
+    <div class="search-results-item">  @for (product of filteredProducts(); track product.id) {
       <div class="product-item" (click)="goToProduct(product.id)">
         <h3>{{ product.name }}</h3>
         <img src="{{product.imageUrl}}" alt="{{product.name}}">
@@ -20,20 +15,25 @@
         <p><strong>Price:</strong> {{ product.price }}</p>
         <p><strong>Stock shipping status:</strong> {{ product.stockShippingStatus }}</p>
       </div>
-    }
+    }</div>
+  
   } @else if (searchedProduct().length > 0) {
     <p>{{ "NO PRODUCTS FOUND" | translate }}</p>
 
   } 
     @if (searchedCustomer().length > 0 && filteredCustomers().length > 0) {
     <h3>{{ 'CUSTOMERS FOUND' | translate }}</h3>
-    @for (customer of filteredCustomers(); track customer.id) {
-      <div class="customer-item" (click)="goToCustomer(customer.id)">
-        <h3>{{ customer.customerName }} {{ customer.customerSurname }}</h3>
-        <p><strong>{{ 'EMAIL' | translate }}:</strong> {{ customer.email }}</p>
-        <p><strong>{{ 'COMPANY' | translate }}:</strong> {{ customer.companyName }}</p>
-      </div>
-    }
+    <div class="search-results-container">
+      @for (customer of filteredCustomers(); track customer.id) {
+        <div class="customer-item" (click)="goToCustomer(customer.id)">
+          <h3>{{ customer.customerName }} {{ customer.customerSurname }}</h3>
+          <p><strong>{{ 'EMAIL' | translate }}:</strong> {{ customer.email }}</p>
+          <p><strong>{{ 'COMPANY' | translate }}:</strong> {{ customer.companyName }}</p>
+        </div>
+      }
+
+    </div>
+   
   } @else if (searchedCustomer().length > 0) {
     <p>{{ 'NO CUSTOMERS FOUND' | translate }}</p>
   }

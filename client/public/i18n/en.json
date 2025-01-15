@@ -11,10 +11,12 @@
 "ADD NEW PRODUCT":"Add New Product",
 "PRODUCT LIST":"Product List",
 
+"NEW PRODUCT": "New Product",
 "NAME":"Name",
 "CATEGORIES": "Categories",
 "DESCRIPTION": "Description",
 "IMAGE URL":"Iamge url",
+"IMAGE":"Iamge",
 "PRICE": "Price",
 "STOCK": "Stock",
 "No products available": "No products available",

@@ -2,8 +2,8 @@
   <mat-button-toggle-group 
     [value]="toggleGroupValue()" 
     (valueChange)="toggleGroupValue.set($event)">
-    <mat-button-toggle value="open">Add New Product</mat-button-toggle>
-    <mat-button-toggle value="close">Product List</mat-button-toggle>
+    <mat-button-toggle value="open">{{"ADD NEW PRODUCT" | translate}}</mat-button-toggle>
+    <mat-button-toggle value="close">{{"PRODUCT LIST" | translate}}</mat-button-toggle>
   </mat-button-toggle-group>
 
   @if (toggleGroupValue() !== 'open') {

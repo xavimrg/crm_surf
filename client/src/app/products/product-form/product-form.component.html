@@ -1,36 +1,36 @@
 <section class="form-container">
   <div class="card">
-    <h3>New Product</h3>
+    <h3>{{ "NEW PRODUCT" | translate }}</h3>
     <form class="modal-container" [formGroup]="productForm" (ngSubmit)="onSubmit()">
       <div class="form-field">
-        <label for="name">Name</label>
+        <label for="name">{{"NAME" | translate}}</label>
         <input id="name" type="text" formControlName="name" placeholder="Name">
       </div>
       <div class="form-field">
-        <label for="imageUrl">Image</label>
+        <label for="imageUrl">{{"IMAGE" | translate}}</label>
         <input id="imageUrl" type="text" formControlName="imageUrl" placeholder="Image url">
       </div>
       <div class="form-field">
-        <label for="price">Price</label>
+        <label for="price">{{"PRICE" | translate}}</label>
         <input id="price" type="number" formControlName="price" placeholder="Price">
       </div>
       <div class="form-field">
-        <label for="description">Description</label>
+        <label for="description">{{"DESCRIPTION" | translate}}</label>
         <input id="description" type="text" formControlName="description" placeholder="Description">
       </div>
       <div class="form-field">
-        <label for="stock">Stock</label>
+        <label for="stock">{{"STOCK" | translate}}</label>
         <input id="stock" type="number" formControlName="stock" placeholder="Stock">
       </div>
       <div class="form-field">
-        <label for="maxStock">Maximum Stock</label>
+        <label for="maxStock">{{"MAXIMUM STOCK" | translate}}</label>
         <input id="maxStock" type="number" formControlName="maxStock" placeholder="Maximum Stock">
       </div>
       <div class="form-field">
-        <label for="stockShippingStatus">Stock Shipping Status</label>
+        <label for="stockShippingStatus">{{"STOCK SHIPPING STATUS" | translate}}</label>
         <input id="stockShippingStatus" type="text" formControlName="stockShippingStatus" placeholder="Stock Shipping Status">
       </div>
-      <button type="submit" class="add-btn">Add new Product</button>
+      <button type="submit" class="add-btn">{{"ADD NEW PRODUCT" | translate}}</button>
     </form>
   </div>
 </section>

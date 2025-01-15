@@ -1,10 +1,11 @@
 import {Component,EventEmitter,Input,Output} from '@angular/core';
 import {  FormGroup,  ReactiveFormsModule } from '@angular/forms';
 import { Product } from '../../shared/interfaces/product';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-product-form',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, TranslateModule],
   templateUrl: './product-form.component.html',
   styleUrl: './product-form.component.scss',
 })

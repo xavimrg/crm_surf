@@ -1,13 +1,13 @@
 
 
-<mat-card>
+<mat-card class="mat-card">
   @if(product){
 <div class="product-container">
   <div class="img-container"> 
     <img class="img" [src]="product.imageUrl" alt="{{product.name}}">
   </div>
   <div class="info-container">
-    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-title> <strong>{{ product.name }}</strong> </mat-card-title>
     <mat-card-content>
       @if(!editMode){
       <p><strong>{{ "CATEGORIES" | translate }}:</strong> {{ product.categories }}</p>
@@ -18,7 +18,7 @@
   
       } @else {
   
-      <form [formGroup]="productForm" (ngSubmit)="updateProduct()">
+      <form class="modal-container" [formGroup]="productForm" (ngSubmit)="updateProduct()">
         <mat-form-field appearance="outline" class="form-field">
           <mat-label>{{ "NAME" | translate }}</mat-label>
           <input matInput id="name" type="text" formControlName="name" placeholder="Name">

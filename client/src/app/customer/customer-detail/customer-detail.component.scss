@@ -1,0 +1,30 @@
+.mat-card{
+    height: 100%
+}
+
+.customer-info{
+    display: flex;
+    margin-top: 20px;
+}
+.customer-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container{
+    height: 50%;
+    width: 50%;
+}
+
+.customer-picture{
+    height: 50vh;
+    margin: 3rem;
+}
+.customer-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 3rem;
+    width: 30%;
+}
+

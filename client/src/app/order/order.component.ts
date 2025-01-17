@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { TranslateModule } from '@ngx-translate/core';
@@ -15,7 +15,7 @@ import { OrderFormComponent } from './order-form/order-form.component';
   templateUrl: './order.component.html',
   styleUrl: './order.component.scss'
 })
-export class OrderComponent {
+export class OrderComponent implements OnInit {
 orderService = inject(OrderService)
 fb = inject(FormBuilder)
 snackBar = inject(MatSnackBar)
@@ -30,4 +30,7 @@ loadOrders(){
   })
 }
 
+ngOnInit(): void {
+  this.loadOrders();
+}
 }

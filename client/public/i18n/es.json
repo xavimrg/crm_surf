@@ -50,7 +50,15 @@
 
 
 "SAVE": "Guardar", 
-"CANCEL":"Cancelar"
+"CANCEL":"Cancelar",
+
+"ORDER STATUS":"Estado del Pedido",
+"TOTAL PRICE" :"Precio Total",
+"CALENDAR DATE":"Fecha",
+"QUANTITY":"Cantidad",
+"CUSTOMER ID":"Cliente Id",
+"PRODUCT ID":"Producto Id"
+
   }
   
 

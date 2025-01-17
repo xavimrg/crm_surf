@@ -9,10 +9,10 @@
     <div class="search-results-item">  @for (product of filteredProducts(); track product.id) {
       <div class="product-item" (click)="goToProduct(product.id)">
         <h3>{{ product.name }}</h3>
-        <img src="{{product.imageUrl}}" alt="{{product.name}}">
+        <!-- <img src="{{product.imageUrl}}" alt="{{product.name}}"> -->
         <p>{{ product.description }}</p>
         <p><strong>Categorías:</strong> {{ product.categories?.join(', ') }}</p>
-        <p><strong>Price:</strong> {{ product.price }}</p>
+        <!-- <p><strong>Price:</strong> {{ product.price }}</p> -->
         <p><strong>Stock shipping status:</strong> {{ product.stockShippingStatus }}</p>
       </div>
     }</div>

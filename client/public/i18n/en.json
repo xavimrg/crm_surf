@@ -49,9 +49,14 @@
 "EDIT":"Edit",
 "GO BACK":"Go back",
 "SAVE": "Save", 
-"CANCEL":"Cancel"
+"CANCEL":"Cancel",
 
-
+"ORDER STATUS":"Order Status",
+"TOTAL PRICE" :"Total Price",
+"CALENDAR DATE":"Caledar Date",
+"QUANTITY":"Quantity",
+"CUSTOMER ID":"Customer Id",
+"PRODUCT ID":"Product Id"
 
 
 }

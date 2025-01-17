@@ -8,12 +8,15 @@
   </div>
   <div class="info-container">
     <mat-card-title> <strong>{{ product.name }}</strong> </mat-card-title>
-    <mat-card-content>
+    <mat-card-content class="">
       @if(!editMode){
       <p><strong>{{ "CATEGORIES" | translate }}:</strong> {{ product.categories }}</p>
       <p><strong>{{ "DESCRIPTION"| translate }}:</strong> {{ product.description }}</p>
       <p><strong>{{ "PRICE"| translate }}:</strong> {{ product.price }} €</p>
       <p><strong>{{ "STOCK" | translate }}:</strong> {{ product.stock }}</p>
+      <p><strong>{{ "MAXIMUM STOCK" | translate }}:</strong> {{ product.maxStock }}</p>
+      <p><strong>{{ "STOCK SHIPPING STATUS" | translate }}:</strong> {{ product.stockShippingStatus }}</p>
+
 
   
       } @else {
@@ -33,7 +36,7 @@
         </mat-form-field>
         <mat-form-field appearance="outline" class="form-field">
           <mat-label>{{"DESCRIPTION" | translate}}</mat-label>
-          <textarea matInput id="description" formControlName="description" placeholder="Description"></textarea>
+          <textarea matInput id="description" formControlName="description" placeholder="Description" class="description-textArea"></textarea>
         </mat-form-field>
         <mat-form-field appearance="outline" class="form-field">
           <mat-label>{{ "STOCK" | translate}}</mat-label>
@@ -48,7 +51,7 @@
           <input matInput id="stockShippingStatus" type="text" formControlName="stockShippingStatus"
             placeholder="Stock Shipping Status">
         </mat-form-field>
-        <div class="button-group">
+        <div class="update-button-group">
           <button mat-raised-button color="primary" type="submit">{{ "SAVE" | translate}}</button>
           <button mat-raised-button color="warn" type="button" (click)="editMode = false"> {{ "CANCEL" | translate}} </button>
         </div>

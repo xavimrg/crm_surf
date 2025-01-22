@@ -1,4 +1,74 @@
-<p>order-list works!</p>
+<div class="order-container">
+    <mat-card>
+      <mat-table [dataSource]="orders" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="productId">
+          <mat-header-cell *matHeaderCellDef>
+            {{ 'PRODUCT ID' | translate }}
+          </mat-header-cell>
+          <mat-cell *matCellDef="let order">
+            <a [routerLink]="['/product', order.productId]">{{ order.productId }}</a>
+          </mat-cell>
+        </ng-container>
+  
+
+        <ng-container matColumnDef="customerId">
+          <mat-header-cell *matHeaderCellDef>
+            {{ 'CUSTOMER ID' | translate }}
+          </mat-header-cell>
+          <mat-cell *matCellDef="let order">
+            <a [routerLink]="['/customer', order.customerId]">{{ order.customerId }}</a>
+          </mat-cell>
+        </ng-container>
+  
+
+        <ng-container matColumnDef="quantity">
+          <mat-header-cell *matHeaderCellDef>
+            {{ 'QUANTITY' | translate }}
+          </mat-header-cell>
+          <mat-cell *matCellDef="let order">
+            {{ order.quantity }}
+          </mat-cell>
+        </ng-container>
+  
+
+        <ng-container matColumnDef="calendarDate">
+          <mat-header-cell *matHeaderCellDef>
+            {{ 'CALENDAR DATE' | translate }}
+          </mat-header-cell>
+          <mat-cell *matCellDef="let order">
+            {{ order.calendarDate }}
+          </mat-cell>
+        </ng-container>
+  
+
+        <ng-container matColumnDef="totalPrice">
+          <mat-header-cell *matHeaderCellDef>
+            {{ 'TOTAL PRICE' | translate }}
+          </mat-header-cell>
+          <mat-cell *matCellDef="let order">
+            {{ order.totalPrice }}
+          </mat-cell>
+        </ng-container>
+  
+
+        <ng-container matColumnDef="orderStatus">
+          <mat-header-cell *matHeaderCellDef>
+            {{ 'ORDER STATUS' | translate }}
+          </mat-header-cell>
+          <mat-cell *matCellDef="let order">
+            {{ order.orderStatus }}
+          </mat-cell>
+        </ng-container>
+  
+ 
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </mat-card>
+  </div>
+  
+  <!-- <p>order-list works!</p>
 <div class="order-container">
 <mat-card>
     <ul class="order-list-container">
@@ -23,4 +93,4 @@
     </ul>
 </mat-card>
 
-</div>
+</div> -->

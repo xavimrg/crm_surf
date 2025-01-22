@@ -52,6 +52,7 @@
 "SAVE": "Guardar", 
 "CANCEL":"Cancelar",
 
+"ORDER ID":"ID del Pedido",
 "ORDER STATUS":"Estado del Pedido",
 "TOTAL PRICE" :"Precio Total",
 "CALENDAR DATE":"Fecha",

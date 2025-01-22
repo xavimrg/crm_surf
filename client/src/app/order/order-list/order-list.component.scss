@@ -1,3 +1,10 @@
 .order-list-container{
     height: auto;
 }
+
+a{
+    text-decoration: none;
+    &:visited{
+        color: inherit;
+    }
+}

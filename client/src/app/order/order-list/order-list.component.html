@@ -1,7 +1,14 @@
 <div class="order-container">
     <mat-card>
       <mat-table [dataSource]="orders" class="mat-elevation-z8">
-
+        <ng-container matColumnDef="orderId">
+            <mat-header-cell *matHeaderCellDef>
+              {{ 'ORDER ID' | translate }}
+            </mat-header-cell>
+            <mat-cell *matCellDef="let order">
+              <a [routerLink]="['/order', order.id]">{{ order.id }}</a>
+            </mat-cell>
+          </ng-container>
         <ng-container matColumnDef="productId">
           <mat-header-cell *matHeaderCellDef>
             {{ 'PRODUCT ID' | translate }}

@@ -11,9 +11,11 @@ import {MatTableModule} from '@angular/material/table';
   styleUrl: './order-list.component.scss'
 })
 export class OrderListComponent {
+[x: string]: any;
 @Input() orders : Order[] = []
 
 displayedColumns: string[] = [
+  'orderId',
   'productId',
   'customerId',
   'quantity',
